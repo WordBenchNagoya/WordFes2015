@@ -31,7 +31,7 @@ sitemap.xml.gz
 /wp-content/themes/twentyfourteen/
 /wp-content/themes/twentythirteen/
 
-/wp-content/plugins/
+# /wp-content/plugins/
 
 /wp-includes/
 /wp-admin/
