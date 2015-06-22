@@ -1,0 +1,71 @@
+/*
+Theme Name: WordFes Nagoya 2015
+Layout: Content-Sidebar
+*/
+
+.main-contents,
+.site-content .widget-area {
+	margin: 0;
+	padding-top: 0px;
+	padding-bottom: 30px;
+}
+
+.home .main-contents,
+.home .site-content .widget-area {
+	padding-top: 30px;
+	padding-bottom: 40px;
+}
+
+@media screen and (min-width: 37.5em) {
+	.main-contents,
+	.site-content .widget-area {
+		padding-top: 30px;
+		padding-bottom: 40px;
+	}
+
+	.home .main-contents,
+	.home .site-content .widget-area {
+		padding-top: 80px;
+		padding-bottom: 100px;
+	}
+}
+
+.container,
+.site-content .widget-area {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+@media screen and (min-width: 800px) {
+	.content-area {
+		margin: 0 auto;
+		max-width: 1000px;
+	}
+
+	.home .content-area {
+		max-width: 100%;
+	}
+
+	.site-main {
+		float: left;
+		margin: 0 2% 0 0;
+		width: 66%;
+	}
+
+	.home .site-main {
+		float: none;
+		margin: 0;
+		width: 100%;
+	}
+
+	.site-content .widget-area {
+		float: right;
+		overflow: hidden;
+		width: 32%;
+	}
+
+	.site-footer {
+		clear: both;
+		width: 100%;
+	}
+}
