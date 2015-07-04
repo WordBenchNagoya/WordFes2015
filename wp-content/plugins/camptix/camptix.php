@@ -5139,9 +5139,9 @@ class CampTix_Plugin {
 
 			</tbody>
 		</table>
-		<?php if ( $is_refundable ) : ?>
+		<?php // if ( $is_refundable ) : ?>
 		<p><?php printf( __( "Change of plans? Made a mistake? Don't worry, you can %s.", 'camptix' ), '<a href="' . esc_url( $this->get_refund_tickets_link( $access_token ) ) . '">' . __( 'request a refund', 'camptix' ) . '</a>' ); ?></p>
-		<?php endif; ?>
+		<?php //endif; ?>
 		</div><!-- #tix -->
 		<?php
 		$contents = ob_get_contents();
@@ -5425,8 +5425,7 @@ class CampTix_Plugin {
       $bank_port_name = esc_attr( $_POST['tix_refund_bank_port_name'] );
       $bank_port_number = esc_attr( $_POST['tix_refund_bank_port_number'] );
       // change 2014 06 24
-
-      $check = isset( $_POST['tix_refund_request_confirmed'] ) ? $_POST['tix_refund_request_confirmed'] : false;
+     $check = isset( $_POST['tix_refund_request_confirmed'] ) ? $_POST['tix_refund_request_confirmed'] : false;
 
       if ( ! $check ) {
         $this->error( __( 'You have to agree to the terms to request a refund.', 'camptix' ) );
@@ -5450,10 +5449,88 @@ class CampTix_Plugin {
         // $this->log( 'Individual refund request result.', $attendee->ID, $result, 'refund' );
         // if ( CampTix_Plugin::PAYMENT_STATUS_REFUNDED == $result ) {
 
+          foreach ( $attendees as $attendee ) {
+            update_post_meta( $attendee->ID, 'tix_refund_reason', $reason );
+            /**
+             * Add cancel meta to user post
+             */
+            update_post_meta( $attendee->ID, 'tix_refund_transfer', $transfer );
+            update_post_meta( $attendee->ID, 'tix_refund_request_transfer_method', $transfer_method );
+            update_post_meta( $attendee->ID, 'tix_refund_bank_name', $bank_name );
+            update_post_meta( $attendee->ID, 'tix_refund_bank_branch_name', $bank_branch_name );
+            update_post_meta( $attendee->ID, 'tix_refund_bank_port_type', $bank_port_type );
+            update_post_meta( $attendee->ID, 'tix_refund_bank_port_name', $bank_port_name );
+            update_post_meta( $attendee->ID, 'tix_refund_bank_port_number', $bank_port_number );
+            wp_update_post( array( 'ID' => $attendee->ID, 'post_status' => 'refund' ) );
+            $admin_email = 'entry@wordfes.org';
+            // $this->email_tickets( $access_token, 'publish', 'refund' );
+            $this->tmp( 'ticket_url', $this->get_tickets_url() );
+            $subject = sprintf( __( "%s " ), $this->options['event_name'] ) . ' キャンセル完了のお知らせ';
+/**
+ * cancel mail contents
+ * @var [type]
+ */
+$cancel_info =
+<<< INFO
+%s 様
+WordFes Nagoya 2015 のチケットキャンセルが正常に完了しました。
+
+■ キャンセル内容のご確認
+
+情報が正確でない場合、ご返金できませんので今一度ご確認ください。
+
+・ご登録メールアドレス　：　%s
+・キャンセル額　　　　　：　%s 円
+・振込　　　　　　　　　：　%s
+・返金方法　　　　　　　：　%s
+・金融機関名　　　　　　：　%s
+・支店名　　　　　　　　：　%s
+・口座種類　　　　　　　：　%s
+・口座名義　　　　　　　：　%s
+・口座番号　　　　　　　：　%s
+・キャンセル理由　　　　：　%s
+
+
+イベントへのご参加を再度ご希望の場合は、以下からもう一度お試しください。
+
+http://2015.wordfes.org/entry/
+
+ご不明な点は、下記までお問い合わせください。
+WordFes Nagoya 2015 実行委員会：info@wordfes.org
+
+INFO;
+            /**
+             * radio btn convert to strings
+             */
+            $transfer_str = ( '0' == $transfer ) ? '未' : '済み';
+            $transfer_method_str = ( '0' == $transfer_method ) ? '当座' : '普通';
+            $bank_port_type_str = ( '0' == $bank_port_type ) ? '振込で返金 ( 振込手数料を除いた金額を返金 )' : '当日受付にて現金で返金';
+
+            /**
+             * cancel info to email content
+             * @var [type]
+             */
+            $content = sprintf( $cancel_info, $attendee->post_title, $transactions['receipt_email'], $transaction['payment_amount'], $transfer_str,  $bank_port_type_str, $bank_name, $bank_branch_name, $transfer_method_str, $bank_port_name, $bank_port_number, $reason );
+
+            $this->log( sprintf( 'Sending refund e-mail notification to %s.', $transactions['receipt_email'] ), $attendees[0]->ID );
+            $this->wp_mail( $transactions['receipt_email'], $subject, $content );
+
+            // To entry@wordfes.org
+            $this->wp_mail( $admin_email, $subject , $content );
+            /**
+             * End cancel meta to user post
+             */
+            // $success = update_post_meta( $attendee->ID, 'post_status',  );
+            $this->log( 'Refund reason attached with data.', $attendee->ID, $reason, 'refund' );
+          }
+
+          $this->info( __( 'Your tickets have been successfully refunded.', 'camptix' ) );
+          return $this->form_refund_success();
+        // } else {
+          // $this->error( __( 'Can not refund the transaction at this time. Please try again later.', 'camptix' ) );
+        // }
       }
     }
-
-    ob_start();
     ?>
     <div id="tix">
       <?php do_action( 'camptix_notices' ); ?>
