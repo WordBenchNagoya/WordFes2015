@@ -40,3 +40,5 @@ sitemap.xml.gz
 # Ignore hook log
 deployments.php
 deployments.log
+
+tags
