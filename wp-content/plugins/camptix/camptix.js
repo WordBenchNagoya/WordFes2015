@@ -154,3 +154,37 @@ var docCookies={getItem:function(e){return decodeURIComponent(document.cookie.re
 		}
 	}
 }(jQuery));
+
+
+/**
+ * 追加
+ */
+(function($){
+
+  var wordFesCamptix = (new function(){
+
+    /** コンストラクタ */
+    var self = function(){
+      self.ticketCheckBox2Radio();
+    };
+
+    /**
+     * チェックボックスをラジオボタンの動きへ
+     * @return void
+     */
+    self.ticketCheckBox2Radio = function(){
+      var target = 'input.ticket-quantity';
+
+      $(target).on('click',function(e,el){
+          // e.preventDefault();
+          $(target).prop('checked',false);
+          $(this).prop('checked', 'checked');
+      });
+    }
+
+    return self;
+  });
+  $(function(){
+    new wordFesCamptix();
+  });
+})(jQuery);
