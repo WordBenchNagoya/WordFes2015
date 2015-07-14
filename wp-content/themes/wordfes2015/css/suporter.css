@@ -1,0 +1,37 @@
+/*
+Theme Name: WordFes Nagoya 2015
+Layout: Suporter
+*/
+
+.suporter-area {
+	display: block;
+}
+
+.suporter-area .suporter-flag {
+	border-bottom: 2px solid #555;
+	font-weight: bold;
+}
+
+.suporter-area .colmun-row {
+	position: relative;
+	overflow: hidden;
+}
+
+.suporter-area .colmun {
+	float: left;
+	width: 305px;
+	height: 150px;
+	margin: 15px 10px;
+}
+
+.suporter-area .colmun a {
+	display: block;
+}
+
+
+@media screen and (min-width: 37.5em) {
+}
+
+
+@media screen and (min-width: 800px) {
+}

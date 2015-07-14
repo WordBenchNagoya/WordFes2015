@@ -21,41 +21,41 @@ add_action( 'init', 'wordfes2015_post_type_init' );
 function wordfes2015_post_type_init() {
 
 	/**
-	 * Sponsor post type
+	 * Suporter post type
 	 * @var array
 	 */
 
-	$sponsor_labels = array(
-		'name' => 'スポンサー',
-		'singular_name' => 'sponsored',
-		'add_new' => '新しいスポンサー',
-		'add_new_item' => '新しいスポンサーを登録',
-		'edit_item' => '新しいスポンサーを編集',
-		'new_item' => '新しいスポンサーを登録',
-		'all_items' => 'すべてのスポンサー',
-		'view_item' => 'スポンサーページを見る',
-		'search_items' => 'スポンサーを検索',
-		'not_found' =>  'スポンサーは見つかりませんでした。',
+	$suporter_labels = array(
+		'name' => 'サポーター',
+		'singular_name' => 'suporter',
+		'add_new' => '新しいサポーター',
+		'add_new_item' => '新しいサポーターを登録',
+		'edit_item' => '新しいサポーターを編集',
+		'new_item' => '新しいサポーターを登録',
+		'all_items' => 'すべてのサポーター',
+		'view_item' => 'サポーターページを見る',
+		'search_items' => 'サポーターを検索',
+		'not_found' =>  'サポーターは見つかりませんでした。',
 		'not_found_in_trash' => 'ゴミ箱の中にはありませんでした',
 		'parent_item_colon' => '',
-		'menu_name' => 'スポンサー'
+		'menu_name' => 'サポーター'
 	);
 
-	$sponsor_args = array(
-		'labels' => $sponsor_labels,
+	$suporter_args = array(
+		'labels' => $suporter_labels,
 		'public' => true,
 		'publicly_queryable' => true,
 		'show_ui' => true,
 		'show_in_menu' => true,
 		'query_var' => true,
-		'rewrite' => array( 'slug' => 'sponsored' ),
+		'rewrite' => array( 'slug' => 'suporter' ),
 		'capability_type' => 'page',
 		'has_archive' => true,
 		'hierarchical' => false,
 		'supports' => array( 'title', 'editor', 'author' )
 	);
 
-	register_post_type( 'sponsored', $sponsor_args );
+	register_post_type( 'suporter', $suporter_args );
 
 	$session_labels = array(
 		'name' => 'セッション',
