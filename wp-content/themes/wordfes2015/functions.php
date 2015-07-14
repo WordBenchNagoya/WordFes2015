@@ -171,3 +171,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load original tags.
  */
 require get_template_directory() . '/inc/origin-tags.php';
+
+/**
+ * Load custom post type.
+ */
+require get_template_directory() . '/inc/custom-post-type.php';
