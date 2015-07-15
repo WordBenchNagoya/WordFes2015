@@ -125,7 +125,8 @@ function wordfes2015_scripts() {
 	// css
 	wp_enqueue_style( 'wordfes2015-layout', get_template_directory_uri().'/css/content-sidebar.css' );
 	wp_enqueue_style( 'wordfes2015-common', get_template_directory_uri().'/css/common.css' );
-	wp_enqueue_style( 'wordfes2015-suporter', get_template_directory_uri().'/css/suporter.css' );
+	wp_enqueue_style( 'wordfes2015-suporter', get_template_directory_uri().'/css/suporter.css' );	// 追加
+	wp_enqueue_style( 'wordfes2015-entry', get_template_directory_uri().'/css/form.css' );		// 追加
 
 	wp_enqueue_script( 'wordfes2015-navigation', get_template_directory_uri() . '/js/navigation.js', array(), null, true );
 

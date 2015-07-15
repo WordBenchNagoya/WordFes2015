@@ -5516,7 +5516,7 @@ class CampTix_Plugin {
         </tbody>
       </table>
       <?php // if ( $is_refundable ) : ?>
-      <p><?php printf( __( "Change of plans? Made a mistake? Don't worry, you can %s.", 'camptix' ), '<a href="' . esc_url( $this->get_refund_tickets_link( $access_token ) ) . '">' . __( 'request a refund', 'camptix' ) . '</a>' ); ?></p>
+      <p><?php printf( __( "Change of plans? Made a mistake? Don't worry, you can %s.", 'camptix' ), '<a href="' . esc_url( $this->get_refund_tickets_link( $access_token ) ) . '">' . __( 'キャンセルをリクエスト', 'camptix' ) . '</a>' ); ?></p>
       <?php //endif; ?>
     </div><!-- #tix -->
     <?php
@@ -7802,6 +7802,11 @@ INFO;
     $transactions['payment_method'] = get_post_meta( $post->ID, 'tix_payment_method', true );
     $transactions['payment_token']  = get_post_meta( $post->ID, 'tix_payment_token', true );
     $ticket_id                      = get_post_meta( $post->ID, 'tix_ticket_id', true );
+
+    // セッションのみの場合実行しない
+    if ( $ticket_id == 74 ){
+      return false;
+    }
     $admin_email                    = 'entry@wordfes.org';
     $subject                        = "振込確認完了のお知らせ | WordFes Nagoya 2015 ";
     $name = get_post_meta( $post->ID, 'tix_last_name', true ) . get_post_meta( $post->ID, 'tix_first_name', true );

@@ -23,7 +23,7 @@ add_action( 'init', 'wordfes2015_taxonomy', 0 );
 function wordfes2015_taxonomy() {
 
 	/**
-	 * sponsor category labels
+	 * suporter category labels
 	 * @var array
 	 */
 
@@ -56,6 +56,41 @@ function wordfes2015_taxonomy() {
 
 	// register "sponsor" category
 	register_taxonomy( 'suporter_category', array( 'suporter' ), $sponsor_args );
+
+	/**
+	 * suporter type labels
+	 * @var array
+	 */
+
+	$sponsor_type_labels = array(
+		'name'                       => _x( 'サポータータイプ', 'Taxonomy General Name', 'wordfes2015' ),
+		'singular_name'              => _x( 'サポータータイプ', 'Taxonomy Singular Name', 'wordfes2015' ),
+		'menu_name'                  => __( 'サポータータイプ', 'wordfes2015' ),
+		'all_items'                  => __( 'すべてのサポータータイプ', 'wordfes2015' ),
+		'parent_item'                => __( '親サポータータイプ', 'wordfes2015' ),
+		'parent_item_colon'          => __( '親サポータータイプ:', 'wordfes2015' ),
+		'new_item_name'              => __( '新しいサポータータイプ', 'wordfes2015' ),
+		'add_new_item'               => __( '新しいサポータータイプを追加', 'wordfes2015' ),
+		'edit_item'                  => __( 'サポータータイプを編集', 'wordfes2015' ),
+		'update_item'                => __( 'サポータータイプを更新', 'wordfes2015' ),
+		'separate_items_with_commas' => __( 'アイテムをカンマで区切る', 'wordfes2015' ),
+		'search_items'               => __( 'サポータータイプを検索', 'wordfes2015' ),
+		'add_or_remove_items'        => __( '追加、または削除', 'wordfes2015' ),
+		'choose_from_most_used'      => __( 'Choose from the most used items', 'wordfes2015' ),
+		'not_found'                  => __( 'サポータータイプ見つかりませんでした。', 'wordfes2015' ),
+	);
+	$sponsor_type_args = array(
+		'labels'                     => $sponsor_type_labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+	);
+
+	// register "sponsor" category
+	register_taxonomy( 'suporter_type', array( 'suporter' ), $sponsor_type_args );
 
 	/**
 	 * Target category labels

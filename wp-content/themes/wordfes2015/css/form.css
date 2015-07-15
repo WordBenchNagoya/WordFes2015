@@ -1,0 +1,15 @@
+/*
+Theme Name: WordFes Nagoya 2015
+Layout: Entry
+*/
+
+input[type="submit"] {
+	font-size: 16px;
+}
+
+@media screen and (min-width: 37.5em) {
+}
+
+
+@media screen and (min-width: 800px) {
+}
