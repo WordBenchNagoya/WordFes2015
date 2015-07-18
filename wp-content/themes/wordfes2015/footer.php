@@ -7,6 +7,8 @@
  * @package WordFes Nagoya 2015
  */
 ?>
+	<?php include get_stylesheet_directory() . '/template-parts/suporter.php'; ?>
+	
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">

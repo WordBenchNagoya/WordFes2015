@@ -1,0 +1,172 @@
+/* 一覧ページ */
+.site-main.session {
+	width: 100%;
+}
+
+.session th {
+	background: #EEE;
+	vertical-align: middle !important;
+}
+
+.session th.classroom {
+	border-bottom: 1px solid #CCC;
+}
+
+.session th.persons {
+	background: #f3f5f8;
+}
+
+.session th.stage1 {
+	background-color: #e95464;
+	color: #FFF;
+}
+
+.session th.stage2 {
+	background-color: #f39800;
+	color: #FFF;
+}
+
+.session th.stage3 {
+	background-color: #007bbb;
+	color: #FFF;
+}
+
+.session th.stage4 {
+	background-color: #00a3af;
+	color: #FFF;
+}
+
+.session th strong {
+	color: #666;
+}
+
+.session td {
+	position: relative;
+}
+
+.session td dl {
+	margin-bottom: 25px !important;
+}
+
+.session .level_icon {
+	display: block;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	margin: 0;
+	padding: 1px 5px;
+	color: #FFF;
+	font-size: 80%;
+	font-style: normal;
+}
+
+.session .level_beginer {
+	background: #e9546b;
+}
+
+.session .level_middle {
+	background: #f08300;
+}
+
+.session .level_expert {
+	background: #007bbb;
+}
+
+.session .level_all {
+	background: #00a497;
+}
+
+.session td .edit-link {
+	display: block;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	margin: 0;
+	padding: 1px 3px;
+	background: #CCC;
+	font-size: 80%;
+}
+
+.session td .edit-link a {
+	color: #FFF;
+}
+
+.session td .edit-link a:hover {
+	color: #F00;
+}
+
+/* 詳細ページ */
+.single .site-main.session {
+	width: 66%;
+}
+
+.single .site-main.session article {
+	margin-top: 4em;
+	padding: 10px 15px;
+	background: #FFF;
+}
+
+.single .site-main.session .entry-title {
+	margin-top: 10px;
+}
+
+.single .site-main.session h3.speaker-title {
+	padding-left: 5px;
+	border-left: none;
+}
+
+.single .site-main.session h3.sub-title04 {
+	margin-top: 5px;
+}
+
+.single .site-main.session h4 {
+	margin-top: 0;
+}
+
+.single .site-main.session .speaker-block {
+	margin-bottom: 10px;
+	padding: 10px;
+	background: #EEE;
+}
+
+.single .site-main.session .speaker-block .speaker-title {
+	margin: 5px 0 10px 10px;
+	font-weight: bold;
+}
+
+.single .site-main.session .speaker-block h4 {
+	margin: 0 0 .75em;
+	padding: .25em 0;
+	border-bottom: 2px solid #CCC;
+	font-weight: bold;
+}
+
+.single .site-main.session .speaker-block .social-icon a {
+	color: #000;
+	text-decoration: underline;
+}
+
+.single .site-main.session .speaker-block .social-icon a:hover {
+	text-decoration: none;
+}
+
+.facebook-icon {
+	margin-right: 1em;
+	padding-left: 25px;
+	background: url( http://2015.wordfes.org/wp-content/themes/wordfes2015/images/facebook.gif ) left center no-repeat;
+}
+
+.twitter-icon {
+	margin-right: 1em;
+	padding-left: 25px;
+	background: url( http://2015.wordfes.org/wp-content/themes/wordfes2015/images/twitter.gif ) left center no-repeat;
+}
+
+.website-icon {
+	margin-right: 1em;
+	padding-left: 25px;
+	background: url( http://2015.wordfes.org/wp-content/themes/wordfes2015/images/homepage.png ) left center no-repeat;
+}
+
+
+

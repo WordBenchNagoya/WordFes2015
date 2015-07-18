@@ -1,0 +1,59 @@
+/*
+Theme Name: WordFes Nagoya 2015
+Layout: Suporter
+*/
+
+.suporter-wrap h2.section--title {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.suporter-area {
+	display: block;
+}
+
+.suporter-area .colmun-row {
+	position: relative;
+	overflow: hidden;
+}
+
+.suporter-area .colmun {
+	position: relative;
+	float: left;
+	width: 230px;
+	height: auto;
+	margin: 15px 6px;
+}
+
+.suporter-area .draft:after {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	padding: 3px;
+	background: #800000;
+	content: '非公開';
+	font-size: 80%;
+	font-weight: bold;
+	color: #FFF;
+}
+
+.suporter-area .colmun a {
+	display: block;
+}
+
+.suporter-area .no-image {
+	display: table-cell;
+	width: 230px;
+	height:113px;
+	padding: 10px;
+	vertical-align: middle;
+	/* background: #FFF; */
+}
+
+
+@media screen and (min-width: 37.5em) {
+}
+
+
+@media screen and (min-width: 800px) {
+}

@@ -170,7 +170,7 @@ var docCookies={getItem:function(e){return decodeURIComponent(document.cookie.re
 
     /**
      * チェックボックスをラジオボタンの動きへ
-     * @return void
+     * @return {[type]} [description]
      */
     self.ticketCheckBox2Radio = function(){
       var target = 'input.ticket-quantity';
