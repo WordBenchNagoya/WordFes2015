@@ -20,3 +20,22 @@ function wordfes2015_is_mobile() {
 	return $_ret;
 }
 endif;
+
+if ( ! function_exists( 'wordfes2014_the_term' ) ) :
+function wordfes2014_the_term( $post_id, $taxonomy, $meta = '' ){
+	$output = '';
+	$terms = get_the_terms( $post_id, $taxonomy );
+
+	if ( $terms ) {
+		foreach ( $terms as $key => $term ) {
+			$output = $term->name;
+		}
+	}
+
+	if ( $meta ) {
+		$output = $term->$meta;
+	}
+
+	echo esc_html( $output );
+}
+endif;

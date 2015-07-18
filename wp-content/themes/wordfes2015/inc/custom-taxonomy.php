@@ -125,7 +125,7 @@ function wordfes2015_taxonomy() {
 	);
 
 	// register target category
-	register_taxonomy( 'target', array( 'session' ), $target_args );
+	register_taxonomy( 'target', array( 'sessions' ), $target_args );
 
 	/**
 	 * Class room category labels
@@ -160,7 +160,7 @@ function wordfes2015_taxonomy() {
 	);
 
 	// register session category
-	register_taxonomy( 'classroom', array( 'session' ), $classroom_args );
+	register_taxonomy( 'classroom', array( 'sessions' ), $classroom_args );
 
 	/**
 	 * Class room category labels
@@ -195,7 +195,7 @@ function wordfes2015_taxonomy() {
 	);
 
 	// register session category
-	register_taxonomy( 'timezone', array( 'session' ), $time_zone_args );
+	register_taxonomy( 'timezone', array( 'sessions' ), $time_zone_args );
 
 	$topics_labels = array(
 		'name'                       => _x( 'お知らせカテゴリ', 'Taxonomy General Name', 'wordfes2015' ),
@@ -225,7 +225,7 @@ function wordfes2015_taxonomy() {
 	);
 
 	// register session category
-	register_taxonomy( 'topics', array( 'session' ), $topics_args );
+	register_taxonomy( 'topics', array( 'sessions' ), $topics_args );
 
 
 }

@@ -59,7 +59,7 @@ function wordfes2015_post_type_init() {
 
 	$session_labels = array(
 		'name' => 'セッション',
-		'singular_name' => 'session',
+		'singular_name' => 'sessions',
 		'add_new' => '新しいセッション',
 		'add_new_item' => '新しいセッションを登録',
 		'edit_item' => 'このセッションを編集',
@@ -80,14 +80,14 @@ function wordfes2015_post_type_init() {
 		'show_ui' => true,
 		'show_in_menu' => true,
 		'query_var' => true,
-		'rewrite' => array( 'slug' => 'session' ),
+		'rewrite' => array( 'slug' => 'sessions' ),
 		'capability_type' => 'page',
 		'has_archive' => false,
 		'hierarchical' => false,
 		'supports' => array( 'title', 'editor', 'author', 'thumbnail')
 	);
 
-	register_post_type( 'session', $session_args );
+	register_post_type( 'sessions', $session_args );
 
 	$topics_labels = array(
 		'name' => 'お知らせ',

@@ -3,16 +3,13 @@ Theme Name: WordFes Nagoya 2015
 Layout: Suporter
 */
 
-.suporter-area {
-	display: block;
+.suporter-wrap h2.section--title {
+	font-size: 1.5em;
+	font-weight: bold;
 }
 
-.suporter-area h2 {
-	width: 100%;
-	height: auto;
-	margin-bottom: 0;
-	text-align: center;
-	font-weight: bold;
+.suporter-area {
+	display: block;
 }
 
 .suporter-area .colmun-row {
@@ -21,10 +18,23 @@ Layout: Suporter
 }
 
 .suporter-area .colmun {
+	position: relative;
 	float: left;
 	width: 230px;
 	height: auto;
 	margin: 15px 6px;
+}
+
+.suporter-area .draft:after {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	padding: 3px;
+	background: #800000;
+	content: '非公開';
+	font-size: 80%;
+	font-weight: bold;
+	color: #FFF;
 }
 
 .suporter-area .colmun a {
@@ -33,11 +43,11 @@ Layout: Suporter
 
 .suporter-area .no-image {
 	display: table-cell;
-	width: 210px;
+	width: 230px;
 	height:113px;
 	padding: 10px;
 	vertical-align: middle;
-	background: #FFF;
+	/* background: #FFF; */
 }
 
 
