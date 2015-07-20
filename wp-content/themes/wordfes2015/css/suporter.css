@@ -51,7 +51,12 @@ Layout: Suporter
 }
 
 
-@media screen and (min-width: 37.5em) {
+@media screen and (max-width: 37.5em) {
+	.suporter-area .colmun {
+		float: none;
+		width: auto;
+		margin: 10px auto;
+	}
 }
 
 

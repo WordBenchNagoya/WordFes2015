@@ -16,25 +16,33 @@ get_header(); ?>
 			$parent_ID = $page_slug->ID;
 			$page_home[] = $parent_ID;
 
+			if ( is_user_logged_in() ) {
+				$post_status = 'draft,publish';
+			} else {
+				$post_status = 'publish';
+			}
+			
 			$wfn_wp_query = new WP_Query();
 			$wfn_wp_pages = $wfn_wp_query->query( array(
-				'post_type' => 'page',
-				'nopaging'  => 'true'
+				'post_type'   => 'page',
+				'nopaging'    => 'true',
+				'post_status' => $post_status,
 			) );
 
 			$page_children = get_page_children( $parent_ID, $wfn_wp_pages );
-
+			
 			if ( ! empty( $page_children ) ) {
 				foreach ( $page_children as $children ) {
 					$page_home[] = $children->ID;
 				}
 			}
-
+			
 			$args = array(
 				'sort_column' => 'menu_order', // 固定ページの順序でソート
 				'sort_order'  => 'asc',
-				'include' => $page_home,
-				'post_type' => 'page',
+				'include'     => $page_home,
+				'post_type'   => 'page',
+				'post_status' => $post_status,
 			);
 
 			$wfnposts = get_pages( $args );

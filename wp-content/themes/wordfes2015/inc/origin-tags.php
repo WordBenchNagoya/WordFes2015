@@ -39,3 +39,19 @@ function wordfes2014_the_term( $post_id, $taxonomy, $meta = '' ){
 	echo esc_html( $output );
 }
 endif;
+
+function wordfes2015_insert_template ( $atts ) {
+	
+	extract(
+		shortcode_atts(array(
+			'file' => '',
+		), $atts)
+	);
+	
+	//var_dump($file);
+	
+	get_template_part( 'template-parts/home', $file );
+	
+}
+
+add_shortcode( 'template', 'wordfes2015_insert_template' );

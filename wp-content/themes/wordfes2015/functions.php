@@ -128,6 +128,10 @@ function wordfes2015_scripts() {
 	wp_enqueue_style( 'wordfes2015-suporter', get_template_directory_uri().'/css/suporter.css' );
 	wp_enqueue_style( 'wordfes2015-session', get_template_directory_uri().'/css/session.css' );
 	wp_enqueue_style( 'wordfes2015-entry', get_template_directory_uri().'/css/form.css' );
+	wp_enqueue_style( 'wordfes2015-infromation', get_template_directory_uri().'/css/information.css' );
+	wp_enqueue_style( 'wordfes2015-social', get_template_directory_uri().'/css/social.css' );
+	wp_enqueue_style( 'wordfes2015-pickup', get_template_directory_uri().'/css/pickup.css' );
+	wp_enqueue_style( 'wordfes2015-schedule', get_template_directory_uri().'/css/schedule.css' );
 
 	wp_enqueue_script( 'wordfes2015-navigation', get_template_directory_uri() . '/js/navigation.js', array(), null, true );
 

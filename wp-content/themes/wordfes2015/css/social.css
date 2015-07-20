@@ -1,0 +1,53 @@
+/*
+Theme Name: WordFes Nagoya 2015
+Layout: Social
+*/
+
+article.post-279 .entry-content {
+	max-width: 100% !important;
+}
+
+.social .wrapper {
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.social .facebook-column .fb_iframe_widget span {
+}
+
+.social .twitter-column iframe {
+	height: 350px !important;
+	width: 100% !important;
+}
+
+.social .sns-link {
+	position: relative;
+	overflow: hidden;
+	margin: 30px auto 0;
+}
+
+.social .sns-link div {
+	float: left;
+	width: auto;
+	margin: 0;
+}
+
+.social .sns-link .fb-nagoya {
+	margin: 0 19px;
+}
+
+
+@media screen and (max-width: 37.5em) {
+	.social .facebook-column {
+		margin-bottom: 20px;
+	}
+	.social .sns-link .fb-nagoya {
+		margin: 0 auto;
+	}
+}
+
+
+@media screen and (min-width: 800px) {
+}
+

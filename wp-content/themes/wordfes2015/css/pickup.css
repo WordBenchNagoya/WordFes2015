@@ -1,0 +1,28 @@
+/*
+Theme Name: WordFes Nagoya 2015
+Layout: Pickup
+*/
+
+article.post-261 .entry-content {
+	max-width: 100% !important;
+}
+
+.pickup {
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.pickup .banner {
+	margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 37.5em) {
+}
+
+
+@media screen and (min-width: 800px) {
+}
+
+

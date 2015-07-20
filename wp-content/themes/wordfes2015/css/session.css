@@ -1,3 +1,8 @@
+/*
+Theme Name: WordFes Nagoya 2015
+Layout: Session
+*/
+
 /* 一覧ページ */
 .site-main.session {
 	width: 100%;
@@ -169,4 +174,9 @@
 }
 
 
+@media screen and (max-width: 37.5em) {
+}
 
+
+@media screen and (min-width: 800px) {
+}
