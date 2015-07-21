@@ -8,7 +8,9 @@ article.post-270 .entry-content {
 }
 
 .information {
-	
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 1em;
 }
 
 .information .entry-title {
@@ -16,6 +18,7 @@ article.post-270 .entry-content {
 }
 
 .information ul {
+	margin: .5em auto;
 	padding: 0 1em;
 	border-top: 1px solid #CCC;
 	border-bottom: 1px solid #CCC;
@@ -30,6 +33,8 @@ article.post-270 .entry-content {
 }
 
 .information li {
+	position: relative;
+	overflow: hidden;
 	margin: 0;
 	padding: .5em 0 .5em 0;
 	border-bottom: 1px dashed #CCC;
@@ -41,7 +46,14 @@ article.post-270 .entry-content {
 }
 
 .information li .date {
+	display: block;
+	float: left;
 	color: #C00;
+}
+
+.information li .title {
+	display: block;
+	float: left;
 }
 
 .information li .title a {

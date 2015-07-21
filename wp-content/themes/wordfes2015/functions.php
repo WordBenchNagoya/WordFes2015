@@ -132,6 +132,7 @@ function wordfes2015_scripts() {
 	wp_enqueue_style( 'wordfes2015-social', get_template_directory_uri().'/css/social.css' );
 	wp_enqueue_style( 'wordfes2015-pickup', get_template_directory_uri().'/css/pickup.css' );
 	wp_enqueue_style( 'wordfes2015-schedule', get_template_directory_uri().'/css/schedule.css' );
+	wp_enqueue_style( 'wordfes2015-blog', get_template_directory_uri().'/css/blog.css' );
 
 	wp_enqueue_script( 'wordfes2015-navigation', get_template_directory_uri() . '/js/navigation.js', array(), null, true );
 
