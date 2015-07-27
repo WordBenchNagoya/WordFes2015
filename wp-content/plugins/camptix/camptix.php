@@ -653,8 +653,8 @@ class CampTix_Plugin {
         break;
       case 'tix_name':
         $questions = get_post_meta( $post_id, 'tix_questions', true );
-        if ( $questions['67'] ) {
-          echo esc_html( $questions['67'] );
+        if ( $questions['68'] ) {
+          echo esc_html( $questions['68'] );
         } else if ( $questions['431'] ) {
           echo esc_html( $questions['431'] );
         }
