@@ -58,11 +58,12 @@ $slide_data   = get_field( 'スライド' );
 						<th>対象者</th>
 						<td>
 					<?php
-					$target_terms = get_the_terms( $session->ID, 'target' );
+					if ( $target_terms = get_the_terms( $session->ID, 'target' ) ):
 					foreach ( $target_terms as $key => $target ) { ?>
 						<?php echo esc_html( $target->name );?>　
 					<?php
-					} ?>
+					}
+					endif; ?>
 						</td>
 					</tr>
 					<tr>
@@ -79,11 +80,12 @@ $slide_data   = get_field( 'スライド' );
 						if ( get_field( 'session_persons' ) ) {
 							echo get_field( 'session_persons' );
 						} else {
-							$classrooms = get_the_terms( $post->ID, 'classroom' );
+							if ( $classrooms = get_the_terms( $post->ID, 'classroom' ) ):
 							foreach ( $classrooms as $key => $classroom ) {
 
 								echo get_field( 'classroom_parson', $classroom );
 							}
+							endif;
 						}
 						?></td>
 					</tr>
