@@ -180,9 +180,9 @@
 	<table class="table table-bordered time-table">
 		<col class="col" width="20%">
 		<tr>
-			<th scope="row">8/30 (日)<br>11:00〜</th>
+			<th scope="row">8/30 (日)<br>9:00〜</th>
 <!-- 			<td><a href="http://2014.wordfes.org/inuyama-tour/">2日目ツアー：未定</a></td> -->
-			<td>9:00 宿泊組は南浜荘で現地解散</td>
+			<td>宿泊組は南浜荘で現地解散</td>
 		</tr>
 	</table>
 	</section>
