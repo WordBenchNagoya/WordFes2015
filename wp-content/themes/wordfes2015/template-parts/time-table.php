@@ -229,7 +229,7 @@ function wordfes2015_timetable_meta( $timezone, $stage ){
           <?php
           $target_terms = get_the_terms( $session->ID, 'target' );
           foreach ( $target_terms as $key => $target ) { ?>
-            <i class="level_<?php echo esc_html( $target->slug );?> level_icon"><?php echo esc_html( $target->name );?></i>
+<!--             <i class="level_<?php echo esc_html( $target->slug );?> level_icon"><?php echo esc_html( $target->name );?></i> -->
           <?php
           } ?>
 					<?php wordfes2015_entry_footer(); ?>
@@ -272,7 +272,7 @@ function wordfes2015_timetable_meta( $timezone, $stage ){
 				<dd>
 					<i class="glyphicon glyphicon-user"></i> <?php echo esc_html( get_field( 'session_speaker_name', $session->ID ) ) ?><br>
 					<span class="visible-xs visible-sm grenn"><?php echo esc_html( $stage->name ); ?>(<?php echo esc_html( $stage->description ); ?>）</span>
-					<i class="level_<?php wordfes2014_the_term( $session->ID, 'target', 'slug' );?> level_icon"><?php wordfes2014_the_term( $session->ID, 'target' );?></i>
+<!-- 					<i class="level_<?php wordfes2014_the_term( $session->ID, 'target', 'slug' );?> level_icon"><?php wordfes2014_the_term( $session->ID, 'target' );?></i> -->
 					<?php wordfes2014_post_edit_link( $session->ID ); ?>
 				</dd>
 			<?php

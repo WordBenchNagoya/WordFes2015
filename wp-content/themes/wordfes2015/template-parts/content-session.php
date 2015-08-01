@@ -54,18 +54,20 @@ $slide_data   = get_field( 'スライド' );
 					</ul>
 				<?php endif; ?>
 				<table class="table table-bordered">
+<!--
 					<tr>
 						<th>対象者</th>
 						<td>
 					<?php
-					if ( $target_terms = get_the_terms( $session->ID, 'target' ) ):
-					foreach ( $target_terms as $key => $target ) { ?>
-						<?php echo esc_html( $target->name );?>　
+					//if ( $target_terms = get_the_terms( $session->ID, 'target' ) ):
+					//foreach ( $target_terms as $key => $target ) { ?>
+					//	<?php //echo esc_html( $target->name );?>　
 					<?php
-					}
-					endif; ?>
+					//}
+					//endif; ?>
 						</td>
 					</tr>
+-->
 					<tr>
 						<th>時間</th>
 						<td><?php wordfes2014_the_term( $post->ID, 'timezone', 'description' ); ?></td>
@@ -91,13 +93,21 @@ $slide_data   = get_field( 'スライド' );
 					</tr>
 				</table>
 
+				<?php
+				// その他
+				if ( get_field( 'session_other' ) ) : ?>
+				<p>
+					<?php the_field( 'session_other' ); ?>
+				</p>
+				<?php endif; ?>
+
 			</div>
 		</div>
 		<?php if ( $speaker_name && get_field( 'session_description' ) ) : ?>
 		<div class="speaker-block">
 			<h3 class="speaker-title">
 <!-- 				スピーカー紹介 -->
-				講師紹介
+				スピーカー（進行役）紹介
 			</h3>
 			<div class="speaker-contents clearfix">
 				<div class="col-lg-3 col-md-3 col-xs-12 text-left">
@@ -151,7 +161,7 @@ $slide_data   = get_field( 'スライド' );
 		<div class="speaker-block">
 			<h3 class="speaker-title">
 <!-- 				進行役紹介 -->
-				講師紹介
+				スピーカー（進行役）紹介
 			</h3>
 			<div class="speaker-contents clearfix">
 				<div class="col-lg-3 col-md-3 col-xs-12 text-left">
