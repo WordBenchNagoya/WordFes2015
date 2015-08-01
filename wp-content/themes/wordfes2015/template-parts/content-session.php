@@ -96,7 +96,8 @@ $slide_data   = get_field( 'スライド' );
 		<?php if ( $speaker_name && get_field( 'session_description' ) ) : ?>
 		<div class="speaker-block">
 			<h3 class="speaker-title">
-				スピーカー紹介
+<!-- 				スピーカー紹介 -->
+				講師紹介
 			</h3>
 			<div class="speaker-contents clearfix">
 				<div class="col-lg-3 col-md-3 col-xs-12 text-left">
@@ -149,7 +150,8 @@ $slide_data   = get_field( 'スライド' );
 
 		<div class="speaker-block">
 			<h3 class="speaker-title">
-				進行役紹介
+<!-- 				進行役紹介 -->
+				講師紹介
 			</h3>
 			<div class="speaker-contents clearfix">
 				<div class="col-lg-3 col-md-3 col-xs-12 text-left">

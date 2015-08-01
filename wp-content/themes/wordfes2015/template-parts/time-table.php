@@ -15,6 +15,7 @@
 ?>
 
 <section class="post-content clearfix" itemprop="articleBody">
+	<p>お断り: セッションの内容は、予告なしに変更される場合がございます。予めご了承ください</p>
 	<table class="table table-bordered time-table">
 		<col class="time" width="20%">
 		<col class="stage1" width="20%">
@@ -68,7 +69,7 @@
 			<th>
 			</th>
 			<td colspan="3">
-			<small>※ Ustream 放送や YouTube の詳細は<a href="http://2014.wordfes.org/topics/ustream-youtube/">こちらをご覧ください</a>。</small>
+<!-- 			<small>※ Ustream 放送や YouTube の詳細は<a href="http://2014.wordfes.org/topics/ustream-youtube/">こちらをご覧ください</a>。</small> -->
 			</td>
 			<td>
 			</td>
@@ -98,9 +99,9 @@
 
 		<tr>
 			<th>11:45〜13:15</th>
-			<td class="rest"><a href="http://2014.wordfes.org/sessions/lunch-meetup/">Lunch MeetUp!</a></td>
-			<td class="rest">昼食休憩</td>
-			<td class="rest"><a href="http://2014.wordfes.org/sessions/lunch-workshop/">ランチタイムハンズオン</a></td>
+			<td class="rest">昼食休憩（90分）<!-- <a href="http://2014.wordfes.org/sessions/lunch-meetup/">Lunch MeetUp!</a> --></td>
+			<td class="rest">昼食休憩（90分）</td>
+			<td class="rest">昼食休憩（90分）<!-- <a href="http://2014.wordfes.org/sessions/lunch-workshop/">ランチタイムハンズオン</a> --></td>
 			<td class="rest">昼食休憩（90分）</td>
 		</tr>
 
@@ -180,7 +181,8 @@
 		<col class="col" width="20%">
 		<tr>
 			<th scope="row">8/30 (日)<br>11:00〜</th>
-			<td><a href="http://2014.wordfes.org/inuyama-tour/">2日目ツアー：未定</a></td>
+<!-- 			<td><a href="http://2014.wordfes.org/inuyama-tour/">2日目ツアー：未定</a></td> -->
+			<td>9:00 宿泊組は南浜荘で現地解散</td>
 		</tr>
 	</table>
 	</section>

@@ -101,9 +101,11 @@ Layout: Session
 }
 
 /* 詳細ページ */
+/*
 .single .site-main.session {
 	width: 66%;
 }
+*/
 
 .single .site-main.session article {
 	margin-top: 4em;
@@ -175,8 +177,16 @@ Layout: Session
 
 
 @media screen and (max-width: 37.5em) {
+	/* 詳細ページ */
+	.single .site-main.session {
+		width: 100%;
+	}
 }
 
 
 @media screen and (min-width: 800px) {
+	/* 詳細ページ */
+	.single .site-main.session {
+		width: 66%;
+	}
 }
