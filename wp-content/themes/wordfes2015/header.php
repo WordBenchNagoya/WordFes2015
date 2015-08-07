@@ -56,8 +56,13 @@
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/images/<?php echo $main_image; ?>" alt="<?php bloginfo( 'description' ); ?> <?php bloginfo( 'name' ); ?>" /></a></h1>
 
 				<?php
+				if ( is_single() ):
+				/* シングルページ用のソーシャルボタン */
+				get_template_part( 'template-parts/social', 'single' );
+				else:
 				/* サイト用のソーシャルボタン */
-				get_template_part( 'template-parts/social' ); ?>
+				get_template_part( 'template-parts/social' );
+				endif;?>
 			</div><!-- .site-branding -->
 		</div><!-- .main-image -->
 

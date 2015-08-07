@@ -13,8 +13,13 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<?php
+		if ( is_single() ):
+		/* シングルページ用のソーシャルボタン */
+		get_template_part( 'template-parts/social', 'single' );
+		else:
 		/* サイト用のソーシャルボタン */
-		get_template_part( 'template-parts/social' ); ?>
+		get_template_part( 'template-parts/social' );
+		endif;?>
 
 		<div class="copyright-wrapper lato">
 			<p class="copyright">Copyright &copy; WordFes Nagoya 2015 All Rights Reserved.</p>

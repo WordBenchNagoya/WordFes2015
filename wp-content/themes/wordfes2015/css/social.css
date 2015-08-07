@@ -16,6 +16,10 @@ article.post-279 .entry-content {
 .social .facebook-column .fb_iframe_widget span {
 }
 
+.social-area .fb_iframe_widget span iframe {
+	max-width: none !important;
+}
+
 .social .twitter-column iframe {
 	height: 350px !important;
 	width: 100% !important;
