@@ -9,7 +9,7 @@
 <div class="social">
 	<div class="wrapper">
 		<div class="facebook-column col-md-6 col-xs-12">
-			<div class="fb-page" data-href="https://www.facebook.com/WordBenchNagoya" data-width="500" data-height="350" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/WordBenchNagoya"><a href="https://www.facebook.com/WordBenchNagoya">WordBench Nagoya</a></blockquote></div></div>
+			<div class="fb-page" data-href="https://www.facebook.com/wordfesnagoya" data-width="500" data-height="350" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/WordBenchNagoya"><a href="https://www.facebook.com/wordfesnagoya">WordFes Nagoya</a></blockquote></div></div>
 		</div><!-- .facebook-column -->
 		
 		<div class="twitter-column col-md-6 col-xs-12">

@@ -23,7 +23,10 @@
 		<?php
 			while ( $topics->have_posts() ): $topics->the_post();
 		?>
-			<li><span class="date"><?php the_time('Y/m/d'); ?></span><span class="title"><?php the_title(); ?></span></li>
+			<li>
+				<span class="date col-md-3 col-xs-3"><?php the_time('Y/m/d'); ?></span>
+				<span class="title col-md-9 col-xs-9"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
+			</li>
 		<?php	
 			endwhile;
 			wp_reset_postdata();
@@ -36,6 +39,7 @@
 		<?php
 		endif;
 		?>
+		<div class="text-right"><a href="/topics/"><img src="<?php echo esc_url( get_template_directory_uri() .'/images/topics_button.png' ); ?>" alt="トピックス一覧" width="135" height="20" /></a></div>
 	</div><!-- .topics-column -->
 	<div class="news-column col-md-6 col-xs-12">
 		<h1 class="entry-title">ブログ</h1>
@@ -53,8 +57,8 @@
 			while ( $blogs->have_posts() ): $blogs->the_post();
 		?>
 			<li>
-				<span class="date"><?php the_time('Y/m/d'); ?></span>
-				<span class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
+				<span class="date col-md-3 col-xs-3"><?php the_time('Y/m/d'); ?></span>
+				<span class="title col-md-9 col-xs-9"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
 			</li>
 		<?php	
 			endwhile;
@@ -68,5 +72,6 @@
 		<?php
 		endif;
 		?>
+		<div class="text-right"><a href="/blog/"><img src="<?php echo esc_url( get_template_directory_uri() .'/images/blog_button.png' ); ?>" alt="ブログ一覧" width="162" height="20" /></a></div>
 	</div><!-- .news-column -->
 </div><!-- .container -->

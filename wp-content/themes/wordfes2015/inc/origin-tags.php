@@ -50,7 +50,7 @@ function wordfes2015_insert_template ( $atts ) {
 	
 	//var_dump($file);
 	
-	get_template_part( 'template-parts/home', $file );
+	get_template_part( 'template-parts/'. $file );
 	
 }
 
