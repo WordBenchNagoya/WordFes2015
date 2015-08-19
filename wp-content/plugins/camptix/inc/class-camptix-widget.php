@@ -86,7 +86,7 @@ class Camptix_Widgets extends WP_Widget {
         </tr>
         <tr>
           <th>締め切り</th>
-          <td>8月16日</td>
+          <td><del>8月16日</del>&nbsp;<strong style="color: red;">8月21日</strong></td>
         </tr>
         <tr>
           <th>料金</th>

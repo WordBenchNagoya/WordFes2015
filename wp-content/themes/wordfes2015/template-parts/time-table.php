@@ -99,7 +99,7 @@
 
 		<tr>
 			<th>11:45〜13:15</th>
-			<td class="rest">昼食休憩（90分）<br /><!-- <a href="/lunch-meetup/" target="_blank"> -->Lunch MeetUp!<!-- </a> --></td>
+			<td class="rest">昼食休憩（90分）<br /><a href="/lunch-meetup/" target="_blank">Lunch MeetUp!</a></td>
 			<td class="rest">昼食休憩（90分）</td>
 			<td class="rest">昼食休憩（90分）<!-- <a href="http://2014.wordfes.org/sessions/lunch-workshop/">ランチタイムハンズオン</a> --></td>
 			<td class="rest">昼食休憩（90分）</td>
