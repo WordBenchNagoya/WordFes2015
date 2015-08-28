@@ -84,7 +84,7 @@ class wp_ustream_status_widget extends WP_Widget {
 
         echo $before_widget;
 		if ( $account )
-		echo $before_title . 'Ustream Status' . $after_title;
+		//echo $before_title . 'Ustream Status' . $after_title;
 		// ==============================
 		// Ustream Status starts here
 		// ==============================
@@ -173,24 +173,32 @@ function ustream_status_shortcode($atts) {
         break;
         }
     if ($UstStatus == 1) {
-    ?>
-        <a href="http://www.ustream.tv/channel/<?php echo $account;?>" alt="<?php _e('Click here to visit the Ustream channel'); ?>" target="_blank">
-        <img src="<?php echo $online; ?>" alt="<?php _e('Live now'); ?>" target="_blank" />
-        </a>
-    <?php
+	    $output = '<a href="http://www.ustream.tv/channel/';
+	    $output .= $account;
+	    $output .= '" alt="';
+	    $output .= __('Click here to visit the Ustream channel');
+	    $output .= '" target="_blank"><img src="';
+	    $output .= $online;
+	    $output .='" alt="';
+	    $output .= __('Live now');
+	    $output .= '" target="_blank" /></a>';
     // ONLINE part ends here
     }
     else if ($UstStatus == 2) {
         // If not live, including when the API does not respond
-        ?>
-        <a href="http://www.ustream.tv/channel/<?php echo $account;?>" alt="<?php _e('Click here to visit the Ustream channel'); ?>" target="_blank">
-        <img src="<?php echo $offline; ?>" alt="<?php _e('Offline'); ?>" />
-        </a>
-    <?php } else {
-        echo _e('Error occured. We could not retrieve the data from Ustream.');
+	    $output = '<a href="http://www.ustream.tv/channel/';
+	    $output .= $account;
+	    $output .= '" alt="';
+	    $output .= __('Click here to visit the Ustream channel');
+	    $output .= '" target="_blank"><img src="';
+	    $output .= $offline;
+	    $output .= '" alt="';
+	    $output .= __('Offline');
+	    $output .= '" /></a>';
+	} else {
+        $output = __('Error occured. We could not retrieve the data from Ustream.');
     }
-
-    return;
+	return $output;
 }
 
 // ============================================================
