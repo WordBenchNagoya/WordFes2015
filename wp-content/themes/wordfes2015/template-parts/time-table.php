@@ -69,7 +69,7 @@
 			<th>
 			</th>
 			<td colspan="3">
-<!-- 			<small>※ Ustream 放送や YouTube の詳細は<a href="http://2014.wordfes.org/topics/ustream-youtube/">こちらをご覧ください</a>。</small> -->
+ 			<small>※ Ustream 放送や YouTube の詳細は<a href="/topics/ustream-youtube/">こちらをご覧ください</a>。</small>
 			</td>
 			<td>
 			</td>
@@ -99,7 +99,7 @@
 
 		<tr>
 			<th>11:45〜13:15</th>
-			<td class="rest">昼食休憩（90分）<br /><!-- <a href="/lunch-meetup/" target="_blank"> -->Lunch MeetUp!<!-- </a> --></td>
+			<td class="rest">昼食休憩（90分）<br /><a href="/lunch-meetup/" target="_blank">Lunch MeetUp!</a></td>
 			<td class="rest">昼食休憩（90分）</td>
 			<td class="rest">昼食休憩（90分）<!-- <a href="http://2014.wordfes.org/sessions/lunch-workshop/">ランチタイムハンズオン</a> --></td>
 			<td class="rest">昼食休憩（90分）</td>
