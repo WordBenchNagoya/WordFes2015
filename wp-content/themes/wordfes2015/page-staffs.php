@@ -51,7 +51,7 @@ get_header(); ?>
 			<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
-
+		<?php get_sidebar(); ?>
 	</div><!-- #primary -->
 	
 <?php //get_template_part( 'template-parts/sponsor', 'page' ); ?>
