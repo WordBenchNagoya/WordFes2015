@@ -36,7 +36,7 @@ $slide_data   = get_field( 'スライド' );
 					if ( $slide_data ) { ?>
 						<p>
 							<a href="<?php the_field( 'スライド' );?>" target="_blank">
-							<img src="<?php echo get_template_directory_uri() ?>/assets/img/common/arrow-sm.gif" alt=""> スライドはこちら
+							<img src="<?php echo get_template_directory_uri() ?>/images/common/arrow-sm.gif" alt=""> スライドはこちら
 							</a>
 						</p>
 				<?php
